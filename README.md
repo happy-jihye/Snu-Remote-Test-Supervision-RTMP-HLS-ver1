@@ -11,21 +11,21 @@
 
 ![Untitled](https://user-images.githubusercontent.com/78718131/107191555-aa69ce00-6a2f-11eb-9b76-7271806affab.png)
 
-####(1) RTMP(Real Time Messaging Protocol) Live Streaming 
-####(2) Review Test : HLS(HTTP Live Streaming) Player **
-####(3) Login, change password, create account ... and so on **
+#### (1) RTMP(Real Time Messaging Protocol) Live Streaming 
+#### (2) Review Test : HLS(HTTP Live Streaming) Player **
+#### (3) Login, change password, create account ... and so on **
 
 ---
 
-#### (1) Create Account
+### (1) Create Account
 
 ![Untitled 1](https://user-images.githubusercontent.com/78718131/107191964-527f9700-6a30-11eb-999b-c786cedc8731.png)
 
-#### (2) Login 
+### (2) Login 
 
 ![Untitled 2](https://user-images.githubusercontent.com/78718131/107191968-54495a80-6a30-11eb-8d75-498b62d45457.png)
 
-#### (3) Change Password
+### (3) Change Password
 
 ![Untitled 3](https://user-images.githubusercontent.com/78718131/107191971-557a8780-6a30-11eb-8552-2772edc673a4.png)
 
@@ -37,15 +37,18 @@
 
 - 회원가입 창에서는 학번, 이름, 이메일을 입력받습니다. 아래의 curl 명령어를 통해 회원가입 정보를 데이터베이스에 보냈습니다. 이후 승인이 이뤄지면 회원가입이 가능해집니다.
 
-'''cpp
+```cpp
     curl -X POST [http://3.35.240.138:3333/sign_up](http://3.35.240.138:3333/sign_up) -d ID=2020-54321 -d name=John -d [mail_address=John@snu.ac.kr](mailto:mail_address=John@snu.ac.kr)
-'''
+```
 
 ### (2) Login Page
 
 - 회원가입 승인이 나면, 임시 비밀번호가 주어집니다.
+
 - 임시번호로 로그인 한 경우, 바로 비밀번호를 변경하도록 Change password 창이 띄워집니다. 비밀번호를 변경하고 나면, 로그인이 완료됩니다.
+
 - 최초 로그인이 아니라면, 자신의 이메일과 비밀번호를 통해 로그인 할 수 있습니다.
+
 - 다음의 curl commend를 입력하였을 때
 
     (1) 최초 로그인이라면, Change Password라는 명령어가 반환되고
@@ -53,14 +56,18 @@
     (2) 입력된 정보가 데이터 베이스에 없다면 error라는 명령어가 반환되며,
 
     (3) 로그인이 완료된다면 token이 반환됩니다. 이후 이 token을 통해 감독관은 실시간 스트리밍 영상을 보거나 과거 영상을 replay할 수 있습니다.
-
+    
+```cpp
     curl -X POST [http://3.35.240.138:3333/login](http://3.35.240.138:3333/login) -d [mail_address=John@snu.ac.kr](mailto:mail_address=John@snu.ac.kr) -d PW=temp_password
+```
 
 ### (3) Change Password
 
 - 아래의 curl commend를 통해 원하는 비밀번호로 비밀번호를 변경합니다.
 
+```cpp
     /curl - X POST [http://3.35.240.138:3333/change_password](http://3.35.240.138:3333/change_password) -d [mail_address=John@snu.ac.kr](mailto:mail_address=John@snu.ac.kr) -d PW=qwerty1234
+```
 
 ## 2. Main Page
 
