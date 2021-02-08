@@ -69,6 +69,8 @@
     /curl - X POST [http://3.35.240.138:3333/change_password](http://3.35.240.138:3333/change_password) -d [mail_address=John@snu.ac.kr](mailto:mail_address=John@snu.ac.kr) -d PW=qwerty1234
 ```
 
+---
+
 ## 2. Main Page
 
 - Main Page에서는 시험을 스케줄링을 할 수 있습니다.
@@ -79,12 +81,15 @@
 
 - Scheduling test 에서는 시험정보(강의명, 시험명 ex. midterm, 시험 날짜, 시험 시작시간과 끝나는시간)와 학생 정보(이름, 학번, 감독관 번호)를 입력받습니다.
 
-    (1) 시험정보
+(1) 시험정보
+    
 ```cpp
     curl -X POST [http://3.35.240.138:3333/add_exam_data](http://3.35.240.138:3333/add_exam_data) -d lec=logicdesign -d test=midterm -d testdate=20210108 -d starttime=1400 -d endtime=1530 -d token=
+    
 ```
 
-    (2) 학생정보
+(2) 학생정보
+    
 ```cpp
     curl -X POST [http://3.35.240.138:3333/add_student_data](http://3.35.240.138:3333/add_student_data) -d num=2020-12345 -d name=원준 -d supervNum=1 -d lec=logicdesign -d test=midterm -d testdate=20210108 -d starttime=1400
 ```
@@ -99,44 +104,50 @@
 
 ## (2) Live Streaming
 
-스케줄링된 시험을 누른 후 감독관 번호를 입력하면, 라이브 스트리밍을 볼 수 있습니다. 학생이 한명씩 입장될 때마다 뷰어에는 사람이 추가됩니다. 
+스케줄링된 시험을 누른 후 감독관 번호를 입력하면, 라이브 스트리밍을 볼 수 있습니다. 
 
-- **참고한 라이브러리 📚**
+학생이 한명씩 입장될 때마다 뷰어에는 사람이 추가됩니다. 
 
-    - RTMP 프로토콜을 통해 라이브 영상을 재생하기 위해 unosquare의 ffmediaelement와 ruslan-B의 FFmpeg.AutoGen의 라이브러리를 참조하였습니다.
+#### 참고한 라이브러리 📚
 
-        [unosquare/ffmediaelement](https://github.com/unosquare/ffmediaelement)
+- RTMP 프로토콜을 통해 라이브 영상을 재생하기 위해 unosquare의 ffmediaelement와 ruslan-B의 FFmpeg.AutoGen의 라이브러리를 참조하였습니다.
 
-        - unosquare의 라이브러리는 원격시험감독을 만들기 위해 일부 수정하였습니다. 제가 참조한 라이브러리는 위의 라이브러리와 100% 일치하지는 않습니다.
+    [unosquare/ffmediaelement](https://github.com/unosquare/ffmediaelement)
 
-        [Ruslan-B/FFmpeg.AutoGen](https://github.com/Ruslan-B/FFmpeg.AutoGen)
+- unosquare의 라이브러리는 원격시험감독을 만들기 위해 일부 수정하였습니다. 제가 참조한 라이브러리는 위의 라이브러리와 100% 일치하지는 않습니다.
 
-    - 이외에도 webeye의 RTMP Player, openCV의 일부 코드등을 참고하였지만 직접적으로 참조를 하지는 않았습니다.
+    [Ruslan-B/FFmpeg.AutoGen](https://github.com/Ruslan-B/FFmpeg.AutoGen)
+
+- 이외에도 webeye의 RTMP Player, openCV의 일부 코드등을 참고하였지만 직접적으로 참조를 하지는 않았습니다.
+
 
 - 또한, live viewer는 총 세가지의 cs파일을 구현하였습니다.
 
 ### 1. Live_player 
 
-    Live player는 rtmp 프로토콜을 통해 받아온 주소를 재생하는 player입니다. 실시간으로 스트리밍 되고 있는 영상을 띄우는 player이므로 play, pause등의 기능은 구현하지 않았고, mute기능만을 추가하였습니다.
+Live player는 rtmp 프로토콜을 통해 받아온 주소를 재생하는 player입니다. 실시간으로 스트리밍 되고 있는 영상을 띄우는 player이므로 play, pause등의 기능은 구현하지 않았고, mute기능만을 추가하였습니다.
 
-    sound 버튼을 누르면 음소거가 해제되고, 버튼을 다시 누르면 음소거가 됩니다.
+sound 버튼을 누르면 음소거가 해제되고, 버튼을 다시 누르면 음소거가 됩니다.
+
 
 ### 2. Live Viewer
 
-    Live Viewer는 여러개의 RTMP 주소를 받으면, Live player를 통해 여러개의 영상을 띄우는 부분입니다. 주소의 끝부분에는 초기접속 / 재접속 여부를 뜻하는 정보가(0, 1) 함께 들어오는데, 이를 통하여 처음 접속하면 영상을 viewer에 추가하고, 재접속을 하면 영상이 새로고침되도록 구현하였습니다.
+Live Viewer는 여러개의 RTMP 주소를 받으면, Live player를 통해 여러개의 영상을 띄우는 부분입니다. 주소의 끝부분에는 초기접속 / 재접속 여부를 뜻하는 정보가(0, 1) 함께 들어오는데, 이를 통하여 처음 접속하면 영상을 viewer에 추가하고, 재접속을 하면 영상이 새로고침되도록 구현하였습니다.
 
-    또한, double click을 하면 화면이 확대될 수 있도록 보이지 않는 버튼을 만들었습니다.
+또한, double click을 하면 화면이 확대될 수 있도록 보이지 않는 버튼을 만들었습니다.
 
 ### 3. Live Tab
-    - 서버와의 통신 프로토콜을 통해 rtmp 주소를 받아오는 부분입니다. refresh button을 누르면 주소를 받을 수 있습니다.
+
+- 서버와의 통신 프로토콜을 통해 rtmp 주소를 받아오는 부분입니다. refresh button을 누르면 주소를 받을 수 있습니다.
 
 ```cpp
-        curl -X POST [http://3.35.240.138:3333/superv_endpoint](http://3.35.240.138:3333/superv_endpoint) -d lec_id=logicdesign.midterm_20210108 -d supervNum=1 -d token=
+curl -X POST [http://3.35.240.138:3333/superv_endpoint](http://3.35.240.138:3333/superv_endpoint) -d lec_id=logicdesign.midterm_20210108 -d supervNum=1 -d token=
 ```
 
-    - 또한, home으로 가거나 프로그램을 종료하는 경우에는 deactivation 명령어를 보내어 시험을 비활성화 하도록 구현하였습니다.
+- 또한, home으로 가거나 프로그램을 종료하는 경우에는 deactivation 명령어를 보내어 시험을 비활성화 하도록 구현하였습니다.
+
 ```cpp
-        curl - X POST [http://3.35.240.138:3333/exam_deactivation](http://3.35.240.138:3333/exam_deactivation) -d lec_id=sf.midterm_20210112 -d token=
+curl - X POST [http://3.35.240.138:3333/exam_deactivation](http://3.35.240.138:3333/exam_deactivation) -d lec_id=sf.midterm_20210112 -d token=
 ```
 
 ## (3) Review Test
@@ -158,7 +169,7 @@
 ```
 
 - 초기에 play button을 누르면 재생이 시작됩니다. play, pause, stop은 기본적으로 사용할 수 있습니다.
-- Slider를 통해 volume과 영상의 speed를 지원합니다. (배속재생 가능)
+- Slider를 통해 volume과 영상의 speed를 조절할 수 있습니다. (배속재생 가능)
 - time slider를 통해 원하는 부분을 바로 재생할 수 있도록 구현하였습니다.
 
     ⭐ 이 부분에 대한 설명은 code의 주석처리에 달아놓았습니다.
@@ -166,7 +177,8 @@
 - home으로 이동하거나 어플리케이션을 중단하는 경우에는 hls가 종료되었다는 command를 서버에 보내주어야합니다. (감독관 만이 주소를 열고 닫을 수 있어야 영상의 주소가 노출되는 경우에도 다른 사람들이 볼 수 없도록 deactivate됨)
 
     따라서 hls가 종료되는 경우에 아래의 curl command를 통해 review test가 종료되었음을 알렸습니다.
-    ```cpp 
-    curl -X POST [http://3.35.240.138:3333/hlsFinish](http://3.35.240.138:3333/hlsFinish) -d httpUrl=https://node-sdk-sample-976067b2-cb45-4960-844f-000466192d2f.s3.ap-northeast-2.amazonaws.com//media/20201228/young_1228_1/young_1228_1.m3u8
+
+```cpp 
+curl -X POST [http://3.35.240.138:3333/hlsFinish](http://3.35.240.138:3333/hlsFinish) -d httpUrl=https://node-sdk-sample-976067b2-cb45-4960-844f-000466192d2f.s3.ap-northeast-2.amazonaws.com//media/20201228/young_1228_1/young_1228_1.m3u8
 ```
 
