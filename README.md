@@ -1,11 +1,9 @@
 # Snu-Remote-Test-Supervision
+
+
 ## 원격 시험 감독 - 감독관용 뷰어
 
-- 아래의 링크를 통해 보시면, 영상과 함께 보실 수 있습니다 🙂 
-
-pdf 보다는 웹링크를 통해 보시는 것을 권장드립니다.
-
-    [https://www.notion.so/8e7d260560d942d2a6b216998fe0a74e](https://www.notion.so/8e7d260560d942d2a6b216998fe0a74e)
+[코드 설명](https://www.notion.so/8e7d260560d942d2a6b216998fe0a74e](https://www.notion.so/8e7d260560d942d2a6b216998fe0a74e)
 
 ---
 
@@ -13,26 +11,23 @@ pdf 보다는 웹링크를 통해 보시는 것을 권장드립니다.
 
 ![Untitled](https://user-images.githubusercontent.com/78718131/107191555-aa69ce00-6a2f-11eb-9b76-7271806affab.png)
 
-< 주요과제>
-**(1) RTMP(Real Time Messaging Protocol) Live Streaming** 
-**(2) Review Test : HLS(HTTP Live Streaming) Player **
-**(3) Login, change password, create account ... and so on **
+####(1) RTMP(Real Time Messaging Protocol) Live Streaming 
+####(2) Review Test : HLS(HTTP Live Streaming) Player **
+####(3) Login, change password, create account ... and so on **
 
-## 1. Login
+---
 
-(1) [Create Account]()
+#### (1) Create Account
 
 ![Untitled 1](https://user-images.githubusercontent.com/78718131/107191964-527f9700-6a30-11eb-999b-c786cedc8731.png)
 
-**(2) [Login]()** 
+#### (2) Login 
 
 ![Untitled 2](https://user-images.githubusercontent.com/78718131/107191968-54495a80-6a30-11eb-8d75-498b62d45457.png)
 
-[**(3) Change Password**]()
+#### (3) Change Password
 
 ![Untitled 3](https://user-images.githubusercontent.com/78718131/107191971-557a8780-6a30-11eb-8552-2772edc673a4.png)
-
-- Video
 
 ---
 
