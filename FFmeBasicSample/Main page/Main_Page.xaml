@@ -1,0 +1,93 @@
+﻿<Page x:Class="FFmePlayer_snu.Main_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FFmePlayer_snu"
+      mc:Ignorable="d"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Height="600" Width="950"        
+      FontFamily="Segoe UI Emoji">
+
+    <Grid >
+
+        <Rectangle Height="300" Width="950" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#013378"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Height="300" Width="950" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle Height="510" Width="900" VerticalAlignment="Bottom" RadiusY="10" RadiusX="10" Fill="White" Margin="25,0,25,23">
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="15" Direction="0" RenderingBias="Quality" ShadowDepth="1" Color="#FFBBBBBB"/>
+            </Rectangle.Effect>
+
+        </Rectangle>
+
+        
+        <Grid Height="510" Width="900" VerticalAlignment="Bottom" Margin="25,0,25,23">
+
+            
+            <ListView Name="myListView" >
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Lecture" Width="150" DisplayMemberBinding="{Binding Lecture}"/>
+                        <GridViewColumn Header="Test" Width="150" DisplayMemberBinding="{Binding Test}"/>
+                        <GridViewColumn Header="Date" Width="150" DisplayMemberBinding="{Binding Date_show}"/>
+                        <GridViewColumn Header="Start time" Width="150" DisplayMemberBinding="{Binding Start_time}"/>
+                        <GridViewColumn Header="End time" Width="150" DisplayMemberBinding="{Binding End_time}"/>
+                        <GridViewColumn Header="Delete" Width="150" >
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Delete" Click="delete_button_click"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                    
+                </ListView.View>
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <EventSetter Event="MouseDoubleClick" Handler="list_Double_clik"/>
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+
+
+            <!--<ItemsControl x:Name="item_buttons">
+                --><!-- ItemsPanelTemplate --><!--
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Rows="2" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+                --><!-- ItemTemplate --><!--
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button Content="{Binding }" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>-->
+        </Grid>
+
+        <!--<TextBox Text="Delete scheduled test" Foreground="White" Background="Transparent" FontSize="15" Height="30" Margin="501,17,297,553" />-->
+        <!--<ComboBox x:Name="test_combo" Text="Test information" HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Background="White" Margin="676,15,0,0" Height="33" SelectionChanged="test_combo_SelectionChanged"/>
+        <Button x:Name="test_combo_enter" Content="enter" FontSize="16" HorizontalAlignment="Left" Style="{StaticResource MaterialDesignFlatDarkBgButton}" Background="#B8D6FE" Margin="857,0,0,553" Width="68" Height="33" VerticalAlignment="Bottom" Click="test_combo_click" Foreground="Black" RenderTransformOrigin="-4.111,-2.468"  />-->
+
+        <Image x:Name="img"  VerticalAlignment="Top" HorizontalAlignment="Right" Height="45" Width="45" Margin="0,10,30,0"/>
+        
+        <Button Content="Schedule Test" FontFamily="Segoe UI Emoji" FontSize="15" Style="{StaticResource MaterialDesignFlatDarkBgButton}" Background="#B8D6FE" Foreground="Black" Margin="25,15,775,554" Click="schedule_Click" />
+        <Button Content="Review Test" FontFamily="Segoe UI Emoji" FontSize="15" Style="{StaticResource MaterialDesignFlatDarkBgButton}" Background="#B8D6FE" Foreground="Black" Margin="202,15,598,554" Click="Review_Click" />
+
+    </Grid>
+</Page>

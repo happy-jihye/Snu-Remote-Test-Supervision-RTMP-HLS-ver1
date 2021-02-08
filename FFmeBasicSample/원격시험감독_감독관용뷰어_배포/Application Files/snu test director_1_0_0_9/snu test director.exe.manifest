@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="snu test director.exe" version="1.0.0.9" publicKeyToken="920a1ab90e708f7c" language="neutral" processorArchitecture="amd64" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="snu test director" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
+    <commandLine file="snu test director.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC 매니페스트 옵션
+          Windows 사용자 계정 컨트롤 수준을 변경하려면 
+          requestedExecutionLevel 노드를 다음 중 하나로 바꾸세요.
+
+          <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+          <requestedExecutionLevel level="requireAdministrator" uiAccess="false" />
+          <requestedExecutionLevel level="highestAvailable" uiAccess="false" />
+
+          이전 버전과의 호환성을 위해 파일 및 레지스트리 가상화를 사용하려면 
+          requestedExecutionLevel 노드를 삭제하세요.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ffme.win.dll" size="422400">
+      <assemblyIdentity name="ffme.win" version="4.1.300.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>7RoIuQQiyhccqBfxGpLs27rNPmSml4/WLCoapgM7jNI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FFmpeg.AutoGen.dll" size="762880">
+      <assemblyIdentity name="FFmpeg.AutoGen" version="4.1.0.2" publicKeyToken="9B7632533A381715" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>MuOjx7I21gG88442mKfXXMKdUWhnFGu4KRnHBvwkGs0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HLSTools.NETFramework.dll" size="22528">
+      <assemblyIdentity name="HLSTools.NETFramework" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>r0REab+IlG2uPQOHuc4T7Twfy9/OvUJbl5pFYjOhwgM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MaterialDesignColors.dll" size="300032">
+      <assemblyIdentity name="MaterialDesignColors" version="1.2.7.1979" publicKeyToken="DF2A72020BD7962A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>d/pQnWa7tgPAOoEJwstdUnpwQC/lepx9LuP77yK5xIY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MaterialDesignThemes.Wpf.dll" size="7727616">
+      <assemblyIdentity name="MaterialDesignThemes.Wpf" version="3.2.0.1979" publicKeyToken="DF2A72020BD7962A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>feGKj5Rze49jAmfq40yatU2lTC2zNU2SA6lR4Lys7wg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NAudio.dll" size="479232">
+      <assemblyIdentity name="NAudio" version="1.8.4.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>r+MeJQkHpvb7jWrr15xXbvTXOtYbxAPeKcq49GId4dI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="662528">
+      <assemblyIdentity name="Newtonsoft.Json" version="11.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>9Yw3T/yq5ONtdA2Q+/f+cNCrtzKM2a86CntwgD6ZS6Q=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="snu test director.exe" size="805368">
+      <assemblyIdentity name="snu test director" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Yo/GekSb7I0u9PtBVmS8Ie5ZG/9bnoAI9EcNwUxC/Mo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vlc.DotNet.Core.dll" size="66048">
+      <assemblyIdentity name="Vlc.DotNet.Core" version="3.1.0.0" publicKeyToken="84529DA31F4EB963" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>WpqlUJYP3yaE6SUHRWtLqr92sM/WB1S3RedsR0yuqNI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vlc.DotNet.Core.Interops.dll" size="79872">
+      <assemblyIdentity name="Vlc.DotNet.Core.Interops" version="3.1.0.0" publicKeyToken="84529DA31F4EB963" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>bWO/3WivFGGAsilkzp9f6LOUaklJe5xYn+gTjNLhb8Q=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vlc.DotNet.Wpf.dll" size="13312">
+      <assemblyIdentity name="Vlc.DotNet.Wpf" version="3.1.0.0" publicKeyToken="84529DA31F4EB963" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>osCQlSQu7wUm1QdxQlo8bPclbHgZif4JAoq3RcUoEoM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="snu test director.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-N9A2D96\JihyeBack" issuerKeyHash="a07ec3ac19ca9a7d5ffc19a386b8810aed26f4d1" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>ae4a2/JBfATjkuC1mfKph3i1/ioJD9uxgvm3gFdLjlc=</DigestValue></Reference></SignedInfo><SignatureValue>RwAVhPDF/UpZYozKrUVB1ReTEX6/qGFjSjVHyRhpEHcwP82VqEaTFKN1YTci5P5H/N1cnFBn204M+BPG5NFeK8KBlDf98Up6vG73RYSyD70UNULz+q4Mi9jzuJRsAVfsmDbeAKLeLFjwvrkXrosCVN6fZTxJ9K3MLhsB2qNO5ZM=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>vHJkBbz7vqbxxFSea4guFs4ObYnVE/DRI4eFaw2Wz//5QbmPinrCmMK4Q7mUu8XH0tYs7buZkn1oYlyhhg3ub8d3UUC3ic1LVRlZCygCOXOdtL889BnfNOto7ciFAT71IANys0v8ZVJEeit07nBvuyO1w0CeQQrpsni+d85KAeU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="578e4b5780b7f982b1db0f092afeb57887a9f299b5e092e3047c41f2db1aee69" Description="" Url=""><as:assemblyIdentity name="snu test director.exe" version="1.0.0.9" publicKeyToken="920a1ab90e708f7c" language="neutral" processorArchitecture="amd64" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-N9A2D96\JihyeBack</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>D4KY44LVzDEYWli5oNJkquYE25PpH3aOW9fAMlyEcbI=</DigestValue></Reference></SignedInfo><SignatureValue>OuWgsJ3krTtAQ3mJCX2ZxMouKKdlJB80QSTV3T7BLa1/NHomEjIHbYlZv7taYfWRjufIbt11hKZiuOzRqmugmLlucHwf088HwgIOL9Gz9STAfFVtDG96kMIfrfOkGRYm0ALgrF0wKpX5PaghR/DKXtHorveQioKrm3WgOWd0XPA=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>vHJkBbz7vqbxxFSea4guFs4ObYnVE/DRI4eFaw2Wz//5QbmPinrCmMK4Q7mUu8XH0tYs7buZkn1oYlyhhg3ub8d3UUC3ic1LVRlZCygCOXOdtL889BnfNOto7ciFAT71IANys0v8ZVJEeit07nBvuyO1w0CeQQrpsni+d85KAeU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB/TCCAWagAwIBAgIQGACAOB43ybZGGiYlrP1xcTANBgkqhkiG9w0BAQsFADA9MTswOQYDVQQDHjIARABFAFMASwBUAE8AUAAtAE4AOQBBADIARAA5ADYAXABKAGkAaAB5AGUAQgBhAGMAazAeFw0yMTAxMTMwNjM0MDhaFw0yMjAxMTMxMjM0MDhaMD0xOzA5BgNVBAMeMgBEAEUAUwBLAFQATwBQAC0ATgA5AEEAMgBEADkANgBcAEoAaQBoAHkAZQBCAGEAYwBrMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC8cmQFvPu+pvHEVJ5riC4Wzg5tidUT8NEjh4VrDZbP//lBuY+KesKYwrhDuZS7xcfS1iztu5mSfWhiXKGGDe5vx3dRQLeJzUtVGVkLKAI5c520vzz0Gd8062jtyIUBPvUgA3KzS/xlUkR6K3TucG+7I7XDQJ5BCumyeL53zkoB5QIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAAOAb23HcCFIoYZiqPoZxteOJYYEKM2LARNSD2l8EoleWbb+0eQ/zGobC2zXXPdtzCrZ00QplqseNqygwybqq4h70L8hOAoTsjLOcwIZbaUnV9/ZKw1jFWtqRsLX26yfj2W/MZmoXzVw7FFetVfKNPn6+sXID3dMuNztpV6cD3l6</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

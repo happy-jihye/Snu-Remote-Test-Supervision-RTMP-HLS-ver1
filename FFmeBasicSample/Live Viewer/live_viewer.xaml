@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="FFmePlayer_snu.Controls.live_viewer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FFmePlayer_snu.Controls"
+        xmlns:ffme="clr-namespace:Unosquare.FFME;assembly=ffme.win"
+        Height="550" Width="950">
+    <Grid>
+        <ItemsControl x:Name="myLivePlayers" >
+
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <local:live_player x:Name="live_player" SourceUpdated="{Binding}" IsEnabled="True"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+
+        </ItemsControl>
+
+        <ItemsControl x:Name="myLivePlayers_btn" >
+
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Button x:Name="live_viewer_btn" SourceUpdated="{Binding}" BorderBrush="Transparent"></Button>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+
+        </ItemsControl>
+
+        <local:live_player x:Name="zoom_live_player" Visibility="Hidden" Height="500" Width="1000"/>
+        <!--<Button x:Name="zoom"  Click="zoom_click" Margin="910,12,10,479"></Button>-->
+    </Grid>
+</UserControl>

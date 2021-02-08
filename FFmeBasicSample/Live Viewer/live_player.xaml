@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="FFmePlayer_snu.Controls.live_player"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FFmePlayer_snu.Controls"
+        xmlns:ffme="clr-namespace:Unosquare.FFME;assembly=ffme.win"
+        Height="252" Width="448">
+
+    <Grid x:Name="grid" Margin="-4,0,0,0" >
+        <ffme:MediaElement  x:Name="Media" Loaded="media_loaded" LoadedBehavior="Play"  Grid.RowSpan="2" />
+        <Button x:Name="Volume" Content="🔊" HorizontalAlignment="Left" Margin="10,0,0,10" Width="43" Height="30" VerticalAlignment="Bottom" Click="Volume_Click"/>
+
+    </Grid>
+</UserControl>

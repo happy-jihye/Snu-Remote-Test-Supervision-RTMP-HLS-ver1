@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="FFmePlayer_snu.Controls.Player"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FFmePlayer_snu.Controls"
+        xmlns:ffme="clr-namespace:Unosquare.FFME;assembly=ffme.win"
+        Height="252" Width="448">
+
+    <Grid  Margin="-4,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="159*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ffme:MediaElement  x:Name="Media" LoadedBehavior="Play" Grid.ColumnSpan="2" />
+        <Button x:Name="btnStart" Content="▶" HorizontalAlignment="Left" Margin="175,0,0,10" Width="29" Height="23" VerticalAlignment="Bottom" Click="BtnStart_Click" Background="#FFFFF8F8"/>
+        <Button x:Name="btnStop" Content="■" HorizontalAlignment="Left" Margin="206,0,0,10" Width="29" Height="23" VerticalAlignment="Bottom" Click="BtnStop_Click" Background="#FFFFF8F8"/>
+        <Button x:Name="btnPause" Content="II" HorizontalAlignment="Left" Margin="238,0,0,10" Width="29" Height="23" VerticalAlignment="Bottom" Click="BtnPause_Click" Background="#FFFFF8F8"/>
+    </Grid>
+</UserControl>

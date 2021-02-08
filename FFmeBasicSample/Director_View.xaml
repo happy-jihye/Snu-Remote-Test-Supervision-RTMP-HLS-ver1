@@ -1,0 +1,60 @@
+﻿<Page x:Class="FFmePlayer_snu.Director_View"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FFmePlayer_snu"
+      mc:Ignorable="d"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Height="600" Width="1080"        
+      FontFamily="Segoe UI Emoji">
+
+    <Grid Margin="10,0,-0.667,14.667">
+
+        <Rectangle Height="295" VerticalAlignment="Top" Margin="-10,0,-0.333,0">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#013378"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Height="290" VerticalAlignment="Bottom" Margin="-10,0,-0.333,0.333">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <TabControl Width="1000" Height="396" VerticalAlignment="Bottom" Margin="35,0,35.667,46.333">
+            <TabItem Header="Live" Margin="-2,0,-91,0">
+                <Grid>
+                    <Label Content=" Please enter ( Lecture ID / Supervisor Num / Date )" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="289,23,289,0" Foreground="Gray" FontSize="18"/>
+                    <StackPanel VerticalAlignment="Center" Margin="15">
+                        <TextBox x:Name="txt_live_Lec" Margin="0,10" materialDesign:HintAssist.Hint="Lecture ID" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" />
+                        <TextBox x:Name="txt_live_test" Margin="0,10" materialDesign:HintAssist.Hint="Test"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" />
+                        <TextBox x:Name="txt_live_Super" Margin="0,10" materialDesign:HintAssist.Hint="Supervisor Num"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" />
+                        <DatePicker x:Name="txt_live_Date" Margin="0,10" materialDesign:HintAssist.Hint="Date (Double Click) " FontFamily="Champagne &amp; Limousines" FontSize="18" MouseDoubleClick="live_date_double_click" />
+                    </StackPanel>
+                    <Button Width="150" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="422,0,422,10" Content="Enter" Click="btn_live_click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Search" Margin="91,0,-173,0" Height="38" VerticalAlignment="Bottom" >
+                <Grid>
+                    <Label Content=" Please enter ( Lecture ID / Student ID / Date )" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="289,23,289,0" Foreground="Gray" FontSize="18"/>
+                    <StackPanel VerticalAlignment="Center" Margin="15">
+                        <TextBox x:Name="txt_search_num" Margin="0,10" materialDesign:HintAssist.Hint="Student Number (ex. 2018-0000)"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18"/>
+                        <TextBox x:Name="txt_search_lec" Margin="0,10" materialDesign:HintAssist.Hint="Lecture ID"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18"/>
+                        <DatePicker x:Name="txt_search_Date" Margin="0,10" materialDesign:HintAssist.Hint="Date (Double Click) " FontFamily="Champagne &amp; Limousines" FontSize="18" MouseDoubleClick="search_date_double_click" />
+                    </StackPanel>
+                    <Button Width="150" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="422,0,422,10" Content="Enter" Click="btn_search_click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+        <Button Content="Add Students" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="20" Margin="465,0,482.667,10.333" BorderBrush="Transparent" Background="Transparent" Foreground="Gray" Cursor="Hand" Click="btn_add_stu" RenderTransformOrigin="0.504,1.226"/>
+        <Image Source="snu_sym.PNG" Height="117" VerticalAlignment="Top" Margin="486,26,482.667,0" Visibility="Visible"/>
+
+
+    </Grid>
+</Page>

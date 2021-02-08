@@ -1,0 +1,71 @@
+﻿<Page x:Class="FFmePlayer_snu.Schedule_test"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FFmePlayer_snu"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Height="600" Width="950"        
+        FontFamily="Segoe UI Emoji">
+
+    <Grid>
+
+        <Rectangle Height="297" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#013378"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Height="303" VerticalAlignment="Bottom">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+
+        <TabControl Height="482" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="858" Margin="46,0,46,20" >
+            <TabItem Header="시험 정보" Margin="-2,0,-70,0" Height="23" VerticalAlignment="Top">
+                <Grid>
+                    <Label Content="Please enter your test information" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="144,23,101,0" Foreground="Gray" FontSize="18" RenderTransformOrigin="0.5,0.5" Width="299"/>
+                    <StackPanel VerticalAlignment="Center" Margin="31,66,21,66" Height="300">
+                        <TextBox x:Name="txt_test_Lec" Margin="0,10" materialDesign:HintAssist.Hint="Lecture"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" />
+                        <TextBox x:Name="txt_test_test" Margin="0,10" materialDesign:HintAssist.Hint="Test"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" />
+                        <DatePicker x:Name="txt_test_testdate" Margin="0,10" materialDesign:HintAssist.Hint="Test Date (Double Click)" FontFamily="Champagne &amp; Limousines" FontSize="18" MouseDoubleClick="date_double_click" />
+                        <materialDesign:TimePicker x:Name="txt_test_start_time" Margin="0,10" materialDesign:HintAssist.Hint="Start Time (Double Click)" FontFamily="Champagne &amp; Limousines" FontSize="18"  MouseDoubleClick="start_double_click"/>
+                        <materialDesign:TimePicker x:Name="txt_test_end_time" Margin="0,10" materialDesign:HintAssist.Hint="End Time (Double Click)" FontFamily="Champagne &amp; Limousines" FontSize="18"  MouseDoubleClick="end_double_click"/>
+                    </StackPanel>
+                    <Button Width="150" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="206,0,188,32" Content="Enter" Click="btn_test_click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="학생 정보" Margin="69,0,-140,0" Height="23" VerticalAlignment="Bottom" >
+                <Grid>
+
+                    <Label Content="Please enter student's information" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="285,15,217,0" Foreground="Gray" FontSize="18" Width="350"/>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="810" Height="393" Margin="21,48,21,10">
+                        <TextBox x:Name="txt_stu_Lec" Margin="0,7" materialDesign:HintAssist.Hint="Lecture"  Style="{StaticResource MaterialDesignFloatingHintTextBox}"  FontFamily="Champagne &amp; Limousines" FontSize="15" />
+                        <TextBox x:Name="txt_stu_test" Margin="0,3" materialDesign:HintAssist.Hint="Test"  Style="{StaticResource MaterialDesignFloatingHintTextBox}"  FontFamily="Champagne &amp; Limousines" FontSize="15" />
+                        <TextBox x:Name="txt_stu_testdate" Margin="0,7" materialDesign:HintAssist.Hint="Test Date (Double Click)"  FontFamily="Champagne &amp; Limousines" FontSize="15"/>
+                        <TextBox x:Name="txt_stu_start_time" Margin="0,7" materialDesign:HintAssist.Hint="Start Time (Click Icon)"  FontFamily="Champagne &amp; Limousines" FontSize="15"/>
+                        <TextBox x:Name="txt_stu_end_time" Margin="0,7" materialDesign:HintAssist.Hint="Start Time (Click Icon)"  FontFamily="Champagne &amp; Limousines" FontSize="15"/>
+                        <TextBox x:Name="txt_stu_superv" Margin="0,3" materialDesign:HintAssist.Hint="Supervisor Number" FontFamily="Champagne &amp; Limousines" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="15" TextChanged="txt_stu_superv_TextChanged" />
+                        <TextBox x:Name="txt_stu_num" Margin="0,3" materialDesign:HintAssist.Hint="Student Number" FontFamily="Champagne &amp; Limousines" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="15" TextChanged="txt_stu_num_TextChanged" />
+                        <TextBox x:Name="txt_stu_name" Margin="0,3" materialDesign:HintAssist.Hint="Student Name " FontFamily="Champagne &amp; Limousines" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="15" TextChanged="txt_stu_name_TextChanged" />
+
+
+                    </StackPanel>
+                    <TextBox x:Name="txt_success" FontFamily="Champagne &amp; Limousines" FontSize="15" TextChanged="txt_success_TextChanged" Margin="354,392,345,21" />
+                    <Button Width="150" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Enter" Click="btn_stu_click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+        <Image x:Name="img"  VerticalAlignment="Top" HorizontalAlignment="Right" Height="90" Width="90" Margin="0,10,50,0"/>
+        <Button Content="🏠" FontSize="15" Style="{StaticResource MaterialDesignFlatDarkBgButton}" Background="#B8D6FE" Margin="19,10,873,559" Click="home_Click" Foreground="Black" />
+
+    </Grid>
+
+</Page>
