@@ -3,7 +3,7 @@
 
 ## 원격 시험 감독 - 감독관용 뷰어
 
-[코드 설명](https://www.notion.so/8e7d260560d942d2a6b216998fe0a74e](https://www.notion.so/8e7d260560d942d2a6b216998fe0a74e)
+[Google 페이지 링크](https://google.com)
 
 ---
 
