@@ -33,10 +33,10 @@ namespace FFmePlayer_snu.Controls
 
         public string rtmp_endpoint_stu(string num, string lec, string token)
         {
-            //"curl -X POST http://3.35.240.138:3333/superv_endpoint -d lec_id=logicdesign.midterm_20210107 -d supervNum=1 -d token="
+            //"curl -X POST http://XXX/superv_endpoint -d lec_id=logicdesign.midterm_20210107 -d supervNum=1 -d token="
             // 강좌이름 / 감독관 번호 / 날짜
 
-            string URI = "http://3.35.240.138:3333/superv_endpoint";
+            string URI = "http://XXX/superv_endpoint";
             string myParameters = "lec_id=" + lec + "&supervNum=" + num + "&token=" + token;
             //"ID=2020-13579&PW=qwerty1234&lec_id=logic_design";
 
