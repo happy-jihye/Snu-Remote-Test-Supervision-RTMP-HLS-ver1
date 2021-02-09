@@ -63,10 +63,10 @@ namespace FFmePlayer_snu.Controls
         // 1) Combobox에 감독관이 담당한 학생들이 자동으로 나열됩니다.
         private void initial_info()
         {
-            // curl -X POST http://3.35.240.138:3333/get_test_pre -d token=
+            // curl -X POST http://XXX/get_test_pre -d token=
             string list;
 
-            string URI = "http://3.35.240.138:3333/get_test_pre";
+            string URI = "http://XXX/get_test_pre";
             string myParameters = "token=" + token;
 
             using (WebClient webClient = new WebClient())
@@ -93,10 +93,10 @@ namespace FFmePlayer_snu.Controls
             string test_info = test_combo.SelectedItem.ToString();
             string[] info = test_info.Split('.');
 
-            // curl -X POST http://3.35.240.138:3333/previousvideo_student_list -d lec=logicdesign -d testdate=20210111 -d test=final
+            // curl -X POST http://XXX/previousvideo_student_list -d lec=logicdesign -d testdate=20210111 -d test=final
             string list;
 
-            string URI = "http://3.35.240.138:3333/previousvideo_student_list";
+            string URI = "http://XXX/previousvideo_student_list";
             string myParameters = "lec=" + info[0] + "&testdate=" + info[2] + "&test=" + info[1] + "&token=" + token;
 
             using (WebClient webClient = new WebClient())
@@ -122,9 +122,9 @@ namespace FFmePlayer_snu.Controls
             string stu_info = stu_combo.SelectedItem.ToString();
             string[] test_info = test_combo.Text.Split('.');
 
-            //curl -X POST http://3.35.240.138:3333/get_test -d num=2020-12345 -d lec=logicdesign =d token=
+            //curl -X POST http://XXX/get_test -d num=2020-12345 -d lec=logicdesign =d token=
 
-            string URI = "http://3.35.240.138:3333/get_test";
+            string URI = "http://XXX/get_test";
             string myParameters = "num=" + stu_info + "&lec=" + test_info[0] + "_" + test_info[2] + "&token=" + token;
 
             using (WebClient webClient = new WebClient())
@@ -582,9 +582,9 @@ namespace FFmePlayer_snu.Controls
                 _mediaSegmentBuffer.Dispose();
             }
 
-            //curl -X POST http://3.35.240.138:3333/hlsFinish -d httpUrl=https://node-sdk-sample-976067b2-cb45-4960-844f-000466192d2f.s3.ap-northeast-2.amazonaws.com//media/20201228/young_1228_1/young_1228_1.m3u8
+            //curl -X POST http://XXX/hlsFinish -d httpUrl=https://node-sdk-sample-976067b2-cb45-4960-844f-000466192d2f.s3.ap-northeast-2.amazonaws.com//media/20201228/young_1228_1/young_1228_1.m3u8
 
-            string URI = "http://3.35.240.138:3333/hlsFinish";
+            string URI = "http://XXX/hlsFinish";
             string myParameters = "httpUrl=" + hls_uri;
 
             using (WebClient webClient = new WebClient())
@@ -612,7 +612,7 @@ namespace FFmePlayer_snu.Controls
                 if (first_click)
                     _mediaSegmentBuffer.Dispose();
 
-                string URI = "http://3.35.240.138:3333/hlsFinish";
+                string URI = "http://XXX/hlsFinish";
                 string myParameters = "httpUrl=" + hls_uri;
 
                 using (WebClient webClient = new WebClient())
