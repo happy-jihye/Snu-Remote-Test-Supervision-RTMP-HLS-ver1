@@ -10,9 +10,8 @@
 ![Untitled](https://user-images.githubusercontent.com/78718131/107191555-aa69ce00-6a2f-11eb-9b76-7271806affab.png)
 
 #### (1) RTMP(Real Time Messaging Protocol) Live Streaming 
-#### (2) Review Test : HLS(HTTP Live Streaming) Player **
-#### (3) Login, change password, create account ... and so on **
-
+#### (2) Review Test : HLS(HTTP Live Streaming) Player
+#### (3) Login, change password, create account ... 
 ---
 
 ### (1) Create Account
