@@ -52,9 +52,9 @@ namespace FFmePlayer_snu.Controls
        
         private void refresh_Click(object sender, RoutedEventArgs e)
         {
-            //curl -X POST http://3.35.240.138:3333/superv_endpoint -d lec_id=logicdesign.midterm_20210108 -d supervNum=1 -d token=
+            //curl -X POST http://XXX/superv_endpoint -d lec_id=logicdesign.midterm_20210108 -d supervNum=1 -d token=
 
-            string URI = "http://3.35.240.138:3333/superv_endpoint";
+            string URI = "http://XXX/superv_endpoint";
             string myParameters = "lec_id=" + lecture + "." + test + "_" + date + "&supervNum=" + superv_num.Text + "&token=" + token;
 
             using (WebClient webClient = new WebClient())
@@ -76,9 +76,9 @@ namespace FFmePlayer_snu.Controls
 
         private void home_Click(object sender, RoutedEventArgs e)
         {
-            //curl - X POST http://3.35.240.138:3333/exam_deactivation -d lec_id=sf.midterm_20210112 -d token=
+            //curl - X POST http://XXX/exam_deactivation -d lec_id=sf.midterm_20210112 -d token=
 
-            string URI = "http://3.35.240.138:3333/exam_deactivation";
+            string URI = "http://XXX/exam_deactivation";
             string myParameters = "lec_id=" + lecture + "." + test + "_" + date + "&supervNum=" + superv_num.Text + "&token=" + token;
 
             using (WebClient webClient = new WebClient())
@@ -99,7 +99,7 @@ namespace FFmePlayer_snu.Controls
             }
             else
             {
-                string URI = "http://3.35.240.138:3333/exam_deactivation";
+                string URI = "http://XXX/exam_deactivation";
                 string myParameters = "lec_id=" + lecture + "." + test + "_" + date + "&supervNum=" + superv_num.Text + "&token=" + token;
 
                 using (WebClient webClient = new WebClient())
