@@ -102,6 +102,8 @@ curl -X POST [http://XXX/add_student_data](http://XXX/add_student_data) -d num=2
 
 ## (2) Live Streaming
 
+![SE-1a92a9d3-7c42-4d06-8b6e-35df3c2aff7b](https://user-images.githubusercontent.com/78718131/107308275-b1461e80-6acb-11eb-9b41-6a49d9f88712.png)
+
 스케줄링된 시험을 누른 후 감독관 번호를 입력하면, 라이브 스트리밍을 볼 수 있습니다. 
 
 학생이 한명씩 입장될 때마다 뷰어에는 사람이 추가됩니다. 
@@ -149,6 +151,8 @@ curl - X POST [http://XXX/exam_deactivation](http://XXX/exam_deactivation) -d le
 ```
 
 ## (3) Review Test
+
+![SE-9b34cdec-fa16-4668-9c43-ed4ece5d06a1](https://user-images.githubusercontent.com/78718131/107308267-adb29780-6acb-11eb-84c8-049a7f2b7c02.png)
 
 - [HLS (HTTP Live Streaming, HLS)](https://ko.wikipedia.org/wiki/HTTP_%EB%9D%BC%EC%9D%B4%EB%B8%8C_%EC%8A%A4%ED%8A%B8%EB%A6%AC%EB%B0%8D) 프로토콜을 통해 AWS S3 클라우드에 저장되어있는 영상을 로드하여 재생하는 부분을 구현하였습니다.
 
