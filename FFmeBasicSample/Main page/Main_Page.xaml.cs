@@ -59,10 +59,10 @@ namespace FFmePlayer_snu
 
         private void live_test_list()
         {
-            // curl -X POST http://3.35.240.138:3333/superv_endpoint_pre -d token=
+            // curl -X POST http://XXX/superv_endpoint_pre -d token=
             string list; //= "logicdesign.midterm.20200101 computer.midterm.20200102 logic.midterm.20200101 comp.midterm.20200102";
 
-            string URI = "http://3.35.240.138:3333/superv_endpoint_pre";
+            string URI = "http://XXX/superv_endpoint_pre";
             string myParameters = "token=" + token;
 
 
@@ -152,11 +152,11 @@ namespace FFmePlayer_snu
         private void delete_button_click(object sender, RoutedEventArgs e)
         {
             // delete 
-            //curl -X POST http://3.35.240.138:3333/delete_exam_data -d lec_id=sf.midterm_20210112 -d token=
+            //curl -X POST http://XXX/delete_exam_data -d lec_id=sf.midterm_20210112 -d token=
 
             MyData data = ListView_GetItem(e);
 
-            string URI = "http://3.35.240.138:3333/delete_exam_data";
+            string URI = "http://XXX/delete_exam_data";
 
             string myParameters = "lec_id=" + data.Lecture + "." + data.Test + "_" + data.Date + "&token=" + token;
             Console.WriteLine(myParameters);
