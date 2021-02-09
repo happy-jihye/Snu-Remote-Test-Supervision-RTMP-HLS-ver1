@@ -38,7 +38,7 @@ namespace FFmePlayer_snu
 
         private void btn_enter(object sender, RoutedEventArgs e)
         {
-            //curl - X POST http://3.35.240.138:3333/change_password -d mail_address=John@snu.ac.kr -d PW=qwerty1234
+            //curl - X POST http://XXX/change_password -d mail_address=John@snu.ac.kr -d PW=qwerty1234
 
             string pw1 = txt_PW1.Password.ToString();
             string pw2 = txt_PW2.Password.ToString();
@@ -47,7 +47,7 @@ namespace FFmePlayer_snu
                 MessageBox.Show("Failed! You entered diffrent passwords");
             else
             {
-                string URI = "http://3.35.240.138:3333/change_password";
+                string URI = "http://XXX/change_password";
                 string myParameters = "mail_address=" + txt_email.Text + "&PW=" + pw1;
 
                 using (WebClient webClient = new WebClient())
