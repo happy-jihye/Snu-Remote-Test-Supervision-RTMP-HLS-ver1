@@ -97,9 +97,9 @@ namespace FFmePlayer_snu
 
         public string test_info(string lec, string test, string testdate, string starttime, string endtime)
         {
-            //curl -X POST http://3.35.240.138:3333/add_exam_data -d lec=logicdesign -d test=midterm -d testdate=20210108 -d starttime=1400 -d endtime=1530 -d token=
+            //curl -X POST http://XXX/add_exam_data -d lec=logicdesign -d test=midterm -d testdate=20210108 -d starttime=1400 -d endtime=1530 -d token=
 
-            string URI = "http://3.35.240.138:3333/add_exam_data";
+            string URI = "http://XXX/add_exam_data";
             Console.WriteLine(URI);
             string myParameters = "lec=" + lec + "&test=" + test + "&testdate=" + testdate + "&starttime=" + starttime + "&endtime=" + endtime + "&token=" + token;
             Console.WriteLine(myParameters);
