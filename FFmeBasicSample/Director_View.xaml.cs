@@ -82,10 +82,10 @@ namespace FFmePlayer_snu
 
         public string rtmp_endpoint_stu(string info)
         {
-            //"curl -X POST http://3.35.240.138:3333/superv_endpoint -d lec_id=logicdesign.midterm_20210108 -d supervNum=1 -d token="
+            //"curl -X POST http://XXX/superv_endpoint -d lec_id=logicdesign.midterm_20210108 -d supervNum=1 -d token="
             // 강좌이름 / 감독관 번호 / 날짜
 
-            string URI = "http://3.35.240.138:3333/superv_endpoint";
+            string URI = "http://XXX/superv_endpoint";
             string myParameters = info;
             Console.WriteLine(myParameters);
 
@@ -105,10 +105,10 @@ namespace FFmePlayer_snu
 
         public string hls_endpoint_stu(string num, string lec, string date)
         {
-            //"curl -X POST http://3.35.240.138:3333/get_test -d num=2020-12345 -d lec=logicdesign =d token="
+            //"curl -X POST http://XXX/get_test -d num=2020-12345 -d lec=logicdesign =d token="
             // 학번 강좌이름 날짜
 
-            string URI = "http://3.35.240.138:3333/get_test";
+            string URI = "http://XXX/get_test";
             string myParameters = "num=" + num + "&lec=" + lec + "_" + date + "&token=" + token;
             //"ID=2020-13579&PW=qwerty1234&lec_id=logic_design";
 
