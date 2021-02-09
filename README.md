@@ -58,7 +58,7 @@
     (3) 로그인이 완료된다면 token이 반환됩니다. 이후 이 token을 통해 감독관은 실시간 스트리밍 영상을 보거나 과거 영상을 replay할 수 있습니다.
     
 ```cpp
-    curl -X POST [http://3.35.240.138:3333/login](http://3.35.240.138:3333/login) -d [mail_address=John@snu.ac.kr](mailto:mail_address=John@snu.ac.kr) -d PW=temp_password
+curl -X POST [http://XXX/login](http://XXX/login) -d [mail_address=John@snu.ac.kr](mailto:mail_address=John@snu.ac.kr) -d PW=temp_password
 ```
 
 ### (3) Change Password
@@ -66,7 +66,7 @@
 - 아래의 curl commend를 통해 원하는 비밀번호로 비밀번호를 변경합니다.
 
 ```cpp
-    /curl - X POST [http://3.35.240.138:3333/change_password](http://3.35.240.138:3333/change_password) -d [mail_address=John@snu.ac.kr](mailto:mail_address=John@snu.ac.kr) -d PW=qwerty1234
+curl - X POST [http://XXX/change_password](http://XXX/change_password) -d [mail_address=John@snu.ac.kr](mailto:mail_address=John@snu.ac.kr) -d PW=qwerty1234
 ```
 
 ---
@@ -84,14 +84,14 @@
 (1) 시험정보
     
 ```cpp
-    curl -X POST [http://3.35.240.138:3333/add_exam_data](http://3.35.240.138:3333/add_exam_data) -d lec=logicdesign -d test=midterm -d testdate=20210108 -d starttime=1400 -d endtime=1530 -d token=
+curl -X POST [http://XXX/add_exam_data](http://XXX/add_exam_data) -d lec=logicdesign -d test=midterm -d testdate=20210108 -d starttime=1400 -d endtime=1530 -d token=
     
 ```
 
 (2) 학생정보
     
 ```cpp
-    curl -X POST [http://3.35.240.138:3333/add_student_data](http://3.35.240.138:3333/add_student_data) -d num=2020-12345 -d name=원준 -d supervNum=1 -d lec=logicdesign -d test=midterm -d testdate=20210108 -d starttime=1400
+curl -X POST [http://XXX/add_student_data](http://XXX/add_student_data) -d num=2020-12345 -d name=원준 -d supervNum=1 -d lec=logicdesign -d test=midterm -d testdate=20210108 -d starttime=1400
 ```
 
 
@@ -141,13 +141,13 @@ Live Viewer는 여러개의 RTMP 주소를 받으면, Live player를 통해 여�
 - 서버와의 통신 프로토콜을 통해 rtmp 주소를 받아오는 부분입니다. refresh button을 누르면 주소를 받을 수 있습니다.
 
 ```cpp
-curl -X POST [http://3.35.240.138:3333/superv_endpoint](http://3.35.240.138:3333/superv_endpoint) -d lec_id=logicdesign.midterm_20210108 -d supervNum=1 -d token=
+curl -X POST [http://XXX/superv_endpoint](http://XXX/superv_endpoint) -d lec_id=logicdesign.midterm_20210108 -d supervNum=1 -d token=
 ```
 
 - 또한, home으로 가거나 프로그램을 종료하는 경우에는 deactivation 명령어를 보내어 시험을 비활성화 하도록 구현하였습니다.
 
 ```cpp
-curl - X POST [http://3.35.240.138:3333/exam_deactivation](http://3.35.240.138:3333/exam_deactivation) -d lec_id=sf.midterm_20210112 -d token=
+curl - X POST [http://XXX/exam_deactivation](http://XXX/exam_deactivation) -d lec_id=sf.midterm_20210112 -d token=
 ```
 
 ## (3) Review Test
@@ -163,9 +163,9 @@ curl - X POST [http://3.35.240.138:3333/exam_deactivation](http://3.35.240.138:3
 
     최종적으로 학생을 선택하면, 해당 학생의 영상을 볼 수 있는 hls 주소가 반환됩니다.
 ```cpp
-    curl -X POST [http://3.35.240.138:3333/get_test_pre](http://3.35.240.138:3333/get_test_pre) -d token=
-    curl -X POST [http://3.35.240.138:3333/previousvideo_student_list](http://3.35.240.138:3333/previousvideo_student_list) -d lec=logicdesign -d testdate=20210111 -d test=final
-    curl -X POST [http://3.35.240.138:3333/get_test](http://3.35.240.138:3333/get_test) -d num=2020-12345 -d lec=logicdesign =d token=
+    curl -X POST [http://XXX/get_test_pre](http://XXX/get_test_pre) -d token=
+    curl -X POST [http://XXX/previousvideo_student_list](http://XXX/previousvideo_student_list) -d lec=logicdesign -d testdate=20210111 -d test=final
+    curl -X POST [http://XXX/get_test](http://XXX/get_test) -d num=2020-12345 -d lec=logicdesign =d token=
 ```
 
 - 초기에 play button을 누르면 재생이 시작됩니다. play, pause, stop은 기본적으로 사용할 수 있습니다.
@@ -179,6 +179,6 @@ curl - X POST [http://3.35.240.138:3333/exam_deactivation](http://3.35.240.138:3
     따라서 hls가 종료되는 경우에 아래의 curl command를 통해 review test가 종료되었음을 알렸습니다.
 
 ```cpp 
-curl -X POST [http://3.35.240.138:3333/hlsFinish](http://3.35.240.138:3333/hlsFinish) -d httpUrl=https://node-sdk-sample-976067b2-cb45-4960-844f-000466192d2f.s3.ap-northeast-2.amazonaws.com//media/20201228/young_1228_1/young_1228_1.m3u8
+curl -X POST [http://XXX/hlsFinish](http://XXX/hlsFinish) -d httpUrl=https://...m3m8
 ```
 
