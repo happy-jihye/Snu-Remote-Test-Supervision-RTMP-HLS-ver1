@@ -46,9 +46,9 @@ namespace FFmePlayer_snu
         private void btn_login(object sender, RoutedEventArgs e)
         {
 
-            //curl -X POST http://3.35.240.138:3333/login -d mail_address=John@snu.ac.kr -d PW=temp_password
+            //curl -X POST http://XXX/login -d mail_address=John@snu.ac.kr -d PW=temp_password
 
-            string URI = "http://3.35.240.138:3333/login";
+            string URI = "http://XXX/login";
             string myParameters = "mail_address=" + txtID.Text + "@snu.ac.kr" + "&PW=" + txtPW.Password.ToString();
 
             string HtmlResult;
