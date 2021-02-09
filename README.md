@@ -38,7 +38,7 @@
 - 회원가입 창에서는 학번, 이름, 이메일을 입력받습니다. 아래의 curl 명령어를 통해 회원가입 정보를 데이터베이스에 보냈습니다. 이후 승인이 이뤄지면 회원가입이 가능해집니다.
 
 ```cpp
-    curl -X POST [http://3.35.240.138:3333/sign_up](http://3.35.240.138:3333/sign_up) -d ID=2020-54321 -d name=John -d [mail_address=John@snu.ac.kr](mailto:mail_address=John@snu.ac.kr)
+curl -X POST [http://XXX/sign_up](http://XXX/sign_up) -d ID=2020-54321 -d name=John -d [mail_address=John@snu.ac.kr](mailto:mail_address=John@snu.ac.kr)
 ```
 
 ### (2) Login Page
