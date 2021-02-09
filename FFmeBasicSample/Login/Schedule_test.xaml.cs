@@ -115,9 +115,9 @@ namespace FFmePlayer_snu
 
         public string stu_info(string num, string name, string superv, string lec, string test, string testdate, string starttime, string endtime)
         {
-            //curl -X POST http://3.35.240.138:3333/add_student_data -d num=2020-12345 -d name=원준 -d supervNum=1 -d lec=logicdesign -d test=midterm -d testdate=20210108 -d starttime=1400 -d endtime=1530 -d token=
+            //curl -X POST http://XXX/add_student_data -d num=2020-12345 -d name=원준 -d supervNum=1 -d lec=logicdesign -d test=midterm -d testdate=20210108 -d starttime=1400 -d endtime=1530 -d token=
 
-            string URI = "http://3.35.240.138:3333/add_student_data";
+            string URI = "http://XXX/add_student_data";
             string myParameters = "num=" + num + "&name=" + name + "&supervNum=" + superv + "&lec=" + lec + "&test=" + test + "&testdate=" + testdate + "&starttime=" + starttime + "&endtime=" + endtime + "&token=" + token;
             //"ID=2020-13579&PW=qwerty1234&lec_id=logic_design";
 
