@@ -37,9 +37,9 @@ namespace FFmePlayer_snu
 
         private void btn_account_enter(object sender, RoutedEventArgs e)
         {
-            //curl -X POST http://3.35.240.138:3333/sign_up -d ID=2020-54321 -d name=John -d mail_address=John@snu.ac.kr
+            //curl -X POST http://XXX/sign_up -d ID=2020-54321 -d name=John -d mail_address=John@snu.ac.kr
 
-            string URI = "http://3.35.240.138:3333/sign_up";
+            string URI = "http://XXX/sign_up";
             string myParameters = "ID=" + txt_num.Text + "&name=" + txt_name.Text + "@snu.ac.kr" + "&mail_address=" + txt_email.Text;
 
             using (WebClient webClient = new WebClient())
